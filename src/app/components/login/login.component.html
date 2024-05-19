@@ -1,0 +1,23 @@
+<div class="login-container">
+    <h1>Login</h1>
+    <div class="login-form">
+        <div class="login-field">
+            <label for="username">Username</label>
+            <input type="text" title="username" [(ngModel)]="model!.username"/>
+        </div>
+
+        <div class="login-field">
+            <label for="password">Password</label>
+            <input type="password" title="password" [(ngModel)]="model!.password"/>
+        </div>
+
+        <div class="login-buttons">
+            <button class="white-button" (click)="reset()">Reset</button>
+            <button class="blue-button" (click)="login()">Login</button>
+        </div>
+
+        <div class="register-redirect">
+            <a (click)="redirectToRegister()">Click here to create an account</a>
+        </div>
+    </div>
+</div>

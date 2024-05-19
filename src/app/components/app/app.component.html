@@ -1,0 +1,28 @@
+<!--Header della pagina, a lato ha il logo dell'account cliccabile per accedere-->
+<app-header *ngIf="viewModeType === 'Normal'" [pageTitle]="title" (onAccountSectionPressed)="setViewMode($event)"></app-header>
+
+<!--Form di login e di registrazione, è possibile passare da una all'altra-->
+<app-login *ngIf="viewModeType === 'Login'" (onUserLogged)="setViewMode($event)" (onRegisterSelected)="setViewMode($event)"></app-login>
+<app-register *ngIf="viewModeType === 'Register'" (onUserRegistered)="setViewMode($event)" (onLoginSelected)="setViewMode($event)"></app-register>
+
+<!--Sezione con getAll e getbyId-->
+<div class="container" *ngIf="authService.islogged() && viewModeType === 'Normal'">
+    <div class="input-category-id">
+        <label>Id: <input title="id" type="number" [(ngModel)]="id" /></label>
+        <button (click)="getById()">Invia</button>
+
+        <div *ngIf="categoryGetById">
+            <label>Id: <p>{{ categoryGetById.id }}</p></label>
+            <label>Name: <p>{{ categoryGetById.name }}</p></label>
+            <label>Description: <p>{{ categoryGetById.description }}</p></label>
+        </div>
+    </div>
+    <button (click)="getAll()">GetAll</button>
+    <div class="card-container">
+        <div class="category-card" *ngFor="let category of categories">
+            <label>Id: <p>{{ category.id }}</p></label>
+            <label>Name: <p>{{ category.name }}</p></label>
+            <label>Description: <p>{{ category.description }}</p></label>
+        </div>
+    </div>
+</div>

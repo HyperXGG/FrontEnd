@@ -1,0 +1,33 @@
+.header-container {
+    background-color: red;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    align-items: center;
+
+    * {
+        padding: 10px;
+    }
+
+    .title-container p {
+        font-size: 40px;
+        color: white;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    .account-section {
+        display: grid;
+        place-items: center;
+
+        svg {
+            cursor: pointer;
+        }
+
+        p {
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+}

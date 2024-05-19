@@ -1,0 +1,69 @@
+.register-container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    
+    * {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .register-form {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+    }
+
+    .register-buttons {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            width: 4rem;
+            height: 2rem;
+            font-weight: bold;
+        }
+
+        .white-button {
+            background-color: white;
+            border-radius: 10px;
+            border: 1px solid black;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: rgb(219, 219, 219);
+                transition: 0.3s;
+            }
+
+            &:active {
+                background-color: rgb(180, 180, 180);
+                transition: 0.3s;
+            }
+        }
+
+        .blue-button {
+            background-color: rgb(52, 52, 255);
+            border-radius: 10px;
+            border: 1px solid black;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: rgb(36, 36, 255);
+                transition: 0.3s;
+            }
+
+            &:active {
+                background-color: rgb(8, 8, 255);
+                transition: 0.3s;
+            }
+        }
+    }
+
+    .login-redirect {
+        color: rgb(57, 57, 255);
+        text-decoration: underline;
+    }
+}

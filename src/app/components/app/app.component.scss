@@ -1,0 +1,18 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    .category-card {
+        border: 2px solid black;
+        border-radius: 15px;
+        width: 25%;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+}
